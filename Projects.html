@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Christian's Projects</title>
     <link rel="stylesheet" href="src/output.css" />
+    <!-- Typeit Library -->
+    <script src="https://unpkg.com/typeit@@{TYPEIT_VERSION}/dist/index.umd.js"></script>
     <script>
       // On page load or when changing themes, best to add inline in `head` to avoid FOUC
       if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
@@ -40,38 +42,19 @@
               id="nav-menu"
               class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-dark dark:shadow-slate-500 lg:dark:bg-transparent font-[roboto] tracking-wider"
             >
-              <!-- <ul class="block lg:flex">
-                <li class="group">
-                  <a href="#home" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Home</a>
+                <li class="lg:mt-0 mt-3 flex items-center pl-8">
+                  <div class="flex">
+                    <span class="mr-2 text-sm text-slate-500">🔆</span>
+                    <input type="checkbox" class="hidden" id="dark-toggle" />
+                    <label for="dark-toggle">
+                      <div class="flex h-5 w-9 cursor-pointer items-center rounded-full border-2 border-primary bg-transparent p-1">
+                        <div class="toggle-circle h-4 w-4 rounded-full transition-all duration-200 ease-in-out"></div>
+                      </div>
+                    </label>
+                    <span class="ml-2 text-sm text-slate-500">🌙</span>
+                  </div>
                 </li>
-                <li class="group">
-                  <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">About Me</a>
-                </li>
-                <li class="group">
-                  <a href="#portfolio" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Portfolio</a>
-                </li>
-                <li class="group">
-                  <a href="#clients" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Skills</a>
-                </li> -->
-              <!-- <li class="group">
-                  <a href="#blog" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Blog</a>
-                </li> -->
-              <!-- <li class="group">
-                  <a href="#contact" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Contact</a>
-                </li> -->
-              <li class="lg:mt-0 mt-3 flex items-center pl-8">
-                <div class="flex">
-                  <span class="mr-2 text-sm text-slate-500">Light</span>
-                  <input type="checkbox" class="hidden" id="dark-toggle" />
-                  <label for="dark-toggle">
-                    <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
-                      <div class="toggle-circle h-4 w-4 rounded-full bg-white transition-all duration-200 ease-in-out"></div>
-                    </div>
-                  </label>
-                  <span class="ml-2 text-sm text-slate-500">Dark</span>
-                </div>
-              </li>
-              <!-- </ul> -->
+              </ul>
             </nav>
           </div>
         </div>
@@ -79,20 +62,19 @@
     </header>
     <!-- Header End -->
 
-    <!-- Portfolio Section Start -->
-    <section id="portfolio" class="w-full pt-36 pb-16 bg-slate-100 dark:bg-slate-800">
+    <!-- Portfolio Section Website Start -->
+    <section id="portfolio" class="w-full pt-36 pb-16 bg-slate-100 dark:bg-slate-800 font-['roboto']">
       <div class="container">
-        <div class="w-full p-4" data-aos-once="true" data-aos="zoom-in">
+        <div class="w-full p-4 xl:-ml-5" data-aos-once="true" data-aos="zoom-in">
           <div class="max-w-xl mx-auto text-center mb-16">
             <h4 class="font-semibold text-lg text-primary mb-2">Portfolio</h4>
-            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Projects</h2>
+            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Projects || <span class="text-primary">Website</span></h2>
             <p class="font-medium text-md text-secondary md:text-lg">This is the projects I've created</p>
           </div>
         </div>
 
-        <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto gap-2">
-
-          <div class="-ml-2 mb-12 p-7 md:w-1/2 border-2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white cursor-pointer" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
+        <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto gap-4">
+          <div class="xl:-ml-5 p-7 md:w-1/2 border-2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white cursor-pointer" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
             <a href="https://christiantertius.github.io/FirstWebsite/" target="_blank">
               <div class="rounded-md shadow-md overflow-hidden">
                 <img src="assets/portfolio/FirstWebsite.png" class="group-hover:scale-105 transition-all duration-300" alt="First" width="w-full" />
@@ -108,11 +90,10 @@
               <p class="font-medium text-base text-secondary text-justify group-hover:text-slate-200 transition-all duration-50">
                 This is my first project made using bootstrap, here I am still a complete beginner who has not been familiar with web programming for a long time, so there are still some small mistakes
               </p>
-              
             </a>
           </div>
 
-          <div class="mb-12 p-7 md:w-1/2 border-2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white cursor-pointer" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
+          <div class="p-7 md:w-1/2 border-2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white cursor-pointer" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
             <a href="https://christiantertius.github.io/Github_Coba4_Home-Screen_Responsive/" target="_blank">
               <div class="rounded-md shadow-md overflow-hidden">
                 <img src="assets/portfolio/HomePage.png" class="group-hover:scale-105 transition-all duration-300" alt="First" width="w-full" />
@@ -127,90 +108,134 @@
               <p class="font-medium text-base text-secondary text-justify group-hover:text-slate-200 transition-all duration-50">
                 This is my simple project that only uses html, css, and a little javascript. This project was created with the aim of beautifying my home screen when using the browser
               </p>
-              
             </a>
           </div>
 
-          <div class="-ml-2 mb-12 p-7 md:w-1/2 border-2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white cursor-pointer" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
-            <a href="https://christiantertius.github.io/FirstWebsite/" target="_blank">
+          <div class="xl:-ml-5 p-7 md:w-1/2 border-2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white cursor-pointer" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
+            <a href="https://christiantertius.github.io/LinDan/dist/" target="_blank">
               <div class="rounded-md shadow-md overflow-hidden">
-                <img src="assets/portfolio/FirstWebsite.png" class="group-hover:scale-105 transition-all duration-300" alt="First" width="w-full" />
+                <img src="assets/portfolio/LinDan.png" class="group-hover:scale-105 transition-all duration-300" alt="First" width="w-full" />
               </div>
 
-              <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white group-hover:text-slate-200">My First Website 💻</h3>
-              <p class="font-medium text-base text-secondary text-justify group-hover:text-slate-200 transition-all duration-50">
-                This is my first project made using bootstrap, here I am still a complete beginner who has not been familiar with web programming for a long time, so there are still some small mistakes
-              </p>
-              <div>
-                <button class="p-[.15rem] rounded-lg mt-2 px-2 text-[12px] text-white bg-primary group-hover:bg-primary/30 shadow-lg transition-all duration-150">HTML</button>
-                <button class="p-[.15rem] rounded-lg mt-2 px-2 text-[12px] text-white bg-primary group-hover:bg-primary/30 shadow-lg transition-all duration-150">CSS</button>
-                <button class="p-[.15rem] rounded-lg mt-2 px-2 text-[12px] text-white bg-primary group-hover:bg-primary/30 shadow-lg transition-all duration-150">JS</button>
-                <button class="p-[.15rem] rounded-lg mt-2 px-2 text-[12px] text-white bg-primary group-hover:bg-primary/30 shadow-lg transition-all duration-150">Bootstrap</button>
+              <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white group-hover:text-slate-200">Lin Dan's World 🏸</h3>
+              <div class="mb-4">
+                <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-red-400 group-hover:bg-red-400/30 shadow-lg transition-all duration-150">HTML</button>
+                <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-blue-400 group-hover:bg-sky-400/30 shadow-lg transition-all duration-150">CSS</button>
+                <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-yellow-400 group-hover:bg-yellow-400/30 shadow-lg transition-all duration-150">JS</button>
+                <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-sky-400 group-hover:bg-sky-400/30 shadow-lg transition-all duration-150">TailwindCSS</button>
+                <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-violet-400 group-hover:bg-violet-400/30 shadow-lg transition-all duration-150">DaisyUI</button>
               </div>
+              <p class="font-medium text-base text-secondary text-justify group-hover:text-slate-200 transition-all duration-50">
+                This is a website that I made for a former men's single badminton athlete from china named Lin Dan, because he is one of my idols in playing badminton. Created using tailwindcss, and daisyui
+              </p>
             </a>
           </div>
 
-          <div class="mb-12 p-7 md:w-1/2 border-2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white cursor-pointer" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
-            <a href="https://christiantertius.github.io/FirstWebsite/" target="_blank">
+          <div class="p-7 md:w-1/2 border-2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white cursor-pointer" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
+            <a href="https://christiantertius.github.io/JunglerEsportGallery/" target="_blank">
               <div class="rounded-md shadow-md overflow-hidden">
-                <img src="assets/portfolio/FirstWebsite.png" class="group-hover:scale-105 transition-all duration-300" alt="First" width="w-full" />
+                <img src="assets/portfolio/JunglerGallery.png" class="group-hover:scale-105 transition-all duration-300" alt="First" width="w-full" />
               </div>
 
-              <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white group-hover:text-slate-200">My First Website 💻</h3>
-              <p class="font-medium text-base text-secondary text-justify group-hover:text-slate-200 transition-all duration-50">
-                This is my first project made using bootstrap, here I am still a complete beginner who has not been familiar with web programming for a long time, so there are still some small mistakes
-              </p>
-              <div>
-                <button class="p-[.15rem] rounded-lg mt-2 px-2 text-[12px] text-white bg-primary group-hover:bg-primary/30 shadow-lg transition-all duration-150">HTML</button>
-                <button class="p-[.15rem] rounded-lg mt-2 px-2 text-[12px] text-white bg-primary group-hover:bg-primary/30 shadow-lg transition-all duration-150">CSS</button>
-                <button class="p-[.15rem] rounded-lg mt-2 px-2 text-[12px] text-white bg-primary group-hover:bg-primary/30 shadow-lg transition-all duration-150">JS</button>
-                <button class="p-[.15rem] rounded-lg mt-2 px-2 text-[12px] text-white bg-primary group-hover:bg-primary/30 shadow-lg transition-all duration-150">Bootstrap</button>
+              <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white group-hover:text-slate-200">Jungler Gallery 🎮</h3>
+              <div class="mb-4">
+                <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-red-400 group-hover:bg-red-400/30 shadow-lg transition-all duration-150">HTML</button>
+                <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-blue-400 group-hover:bg-sky-400/30 shadow-lg transition-all duration-150">CSS</button>
+                <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-yellow-400 group-hover:bg-yellow-400/30 shadow-lg transition-all duration-150">JS</button>
               </div>
+              <p class="font-medium text-base text-secondary text-justify group-hover:text-slate-200 transition-all duration-50">
+                This website is a gallery and a brief bio of the jungler in the mobile legends game in season 10, made with html, css, and javascript.
+              </p>
             </a>
           </div>
 
-          <div class="-ml-2 mb-12 p-7 md:w-1/2 border-2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white cursor-pointer" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
-            <a href="https://christiantertius.github.io/FirstWebsite/" target="_blank">
+          <div class="xl:-ml-5 p-7 md:w-1/2 border-2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white cursor-pointer" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
+            <a href="https://christiantertius.github.io/yamada-motorcycle/" target="_blank">
               <div class="rounded-md shadow-md overflow-hidden">
-                <img src="assets/portfolio/FirstWebsite.png" class="group-hover:scale-105 transition-all duration-300" alt="First" width="w-full" />
+                <img src="assets/portfolio/YamadaMotorcylce.png" class="group-hover:scale-105 transition-all duration-300" alt="First" width="w-full" />
               </div>
 
-              <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white group-hover:text-slate-200">My First Website 💻</h3>
-              <p class="font-medium text-base text-secondary text-justify group-hover:text-slate-200 transition-all duration-50">
-                This is my first project made using bootstrap, here I am still a complete beginner who has not been familiar with web programming for a long time, so there are still some small mistakes
-              </p>
-              <div>
-                <button class="p-[.15rem] rounded-lg mt-2 px-2 text-[12px] text-white bg-primary group-hover:bg-primary/30 shadow-lg transition-all duration-150">HTML</button>
-                <button class="p-[.15rem] rounded-lg mt-2 px-2 text-[12px] text-white bg-primary group-hover:bg-primary/30 shadow-lg transition-all duration-150">CSS</button>
-                <button class="p-[.15rem] rounded-lg mt-2 px-2 text-[12px] text-white bg-primary group-hover:bg-primary/30 shadow-lg transition-all duration-150">JS</button>
-                <button class="p-[.15rem] rounded-lg mt-2 px-2 text-[12px] text-white bg-primary group-hover:bg-primary/30 shadow-lg transition-all duration-150">Bootstrap</button>
+              <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white group-hover:text-slate-200">Yamada Motorcycle 🏍</h3>
+              <div class="mb-4">
+                <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-red-400 group-hover:bg-red-400/30 shadow-lg transition-all duration-150">HTML</button>
+                <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-blue-400 group-hover:bg-sky-400/30 shadow-lg transition-all duration-150">CSS</button>
               </div>
+              <p class="font-medium text-base text-secondary text-justify group-hover:text-slate-200 transition-all duration-50">
+                This is a website that I made using only html, and css, not javascript at all so that the existing interactions may still have many shortcomings, I made this project to fulfill individual assignments in the Human Computer Interaction course in Semester 2.
+              </p>
             </a>
           </div>
 
-          <div class="mb-12 p-7 md:w-1/2 border-2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white cursor-pointer" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
-            <a href="https://christiantertius.github.io/FirstWebsite/" target="_blank">
+          <div class="p-7 md:w-1/2 border-2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white cursor-pointer" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
+            <a href="https://christiantertius.github.io/MTGraphy/" target="_blank">
               <div class="rounded-md shadow-md overflow-hidden">
-                <img src="assets/portfolio/FirstWebsite.png" class="group-hover:scale-105 transition-all duration-300" alt="First" width="w-full" />
+                <img src="assets/portfolio/MTGraphy.png" class="group-hover:scale-105 transition-all duration-300 shadow-lg" alt="First" width="w-full" />
               </div>
 
-              <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white group-hover:text-slate-200">My First Website 💻</h3>
-              <p class="font-medium text-base text-secondary text-justify group-hover:text-slate-200 transition-all duration-50">
-                This is my first project made using bootstrap, here I am still a complete beginner who has not been familiar with web programming for a long time, so there are still some small mistakes
-              </p>
-              <div>
-                <button class="p-[.15rem] rounded-lg mt-2 px-2 text-[12px] text-white bg-primary group-hover:bg-primary/30 shadow-lg transition-all duration-150">HTML</button>
-                <button class="p-[.15rem] rounded-lg mt-2 px-2 text-[12px] text-white bg-primary group-hover:bg-primary/30 shadow-lg transition-all duration-150">CSS</button>
-                <button class="p-[.15rem] rounded-lg mt-2 px-2 text-[12px] text-white bg-primary group-hover:bg-primary/30 shadow-lg transition-all duration-150">JS</button>
-                <button class="p-[.15rem] rounded-lg mt-2 px-2 text-[12px] text-white bg-primary group-hover:bg-primary/30 shadow-lg transition-all duration-150">Bootstrap</button>
+              <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white group-hover:text-slate-200">MTGraphy 📷</h3>
+              <div class="mb-4">
+                <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-red-400 group-hover:bg-red-400/30 shadow-lg transition-all duration-150">HTML</button>
+                <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-blue-400 group-hover:bg-blue-400/30 shadow-lg transition-all duration-150">CSS</button>
+                <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-yellow-400 group-hover:bg-yellow-400/30 shadow-lg transition-all duration-150">JS</button>
               </div>
+              <p class="font-medium text-base text-secondary text-justify group-hover:text-slate-200 transition-all duration-50">
+                This is a website made with HTML, CSS, and JS. This project was made to fulfill the group project assignment in the Human Computer Interaction course in Semester 2.
+              </p>
             </a>
           </div>
-          <a href="index.html" class="py-2 px-4 bg-primary text-white rounded-xl active:scale-95 hover:bg-transparent border-2 border-primary hover:text-primary transition-all duration-300">Back to Home!</a>
+          <!-- <a href="index.html" class="py-2 px-4 bg-primary text-white rounded-xl active:scale-95 hover:bg-transparent border-2 border-primary hover:text-primary transition-all duration-300">Back to Home!</a> -->
         </div>
       </div>
     </section>
-    <!-- Portfolio Sectin End -->
+    <!-- Portfolio Sectin Website End -->
+
+
+    <!-- Portfolio Section UI Start -->
+    <section id="portfolio" class="w-full pt-36 pb-16 bg-slate-100 dark:bg-slate-800 font-['roboto']">
+      <div class="container">
+        <div class="w-full p-4" data-aos-once="true" data-aos="zoom-in">
+          <div class="max-w-xl mx-auto text-center mb-16">
+            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Projects || <span class="text-primary">UI Design</span></h2>
+            <p class="font-medium text-md text-secondary md:text-lg">This is the projects I've created</p>
+          </div>
+        </div>
+
+        <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto gap-4">
+          <div class="xl:-ml-5 p-7 md:w-1/2 border-2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white cursor-pointer" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
+            <a href="https://www.figma.com/file/a5ufqIQE09DfEUADyYoRKi/Kelompok-3---AI?type=design&node-id=0%3A1&mode=design&t=UKpy82b1flxBVGAe-1" target="_blank">
+              <div class="rounded-md shadow-xl overflow-hidden">
+                <img src="assets/portfolio/PC Builder.png" class="group-hover:scale-105 transition-all duration-300" alt="First" width="w-full" />
+              </div>
+
+              <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white group-hover:text-slate-200">PC Builder UI 💻</h3>
+              <p class="font-medium text-base text-secondary text-justify group-hover:text-slate-200 transition-all duration-50">
+                This is a PC Builder UI created to fulfill the Artificial Intelligence course, this UI is made in groups of 5 people. This PC Builder is made so that users can easily choose pc components that suit their needs and budget.
+              </p>
+            </a>
+          </div>
+
+          <div class="p-7 md:w-1/2 border-2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white cursor-pointer" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
+            <a href="https://www.figma.com/file/RmVCFA6zQX8Lt02bwZOsLG/UTS-SE-UI?type=design&node-id=0%3A1&mode=design&t=WbMlfJQ8U9EHHEBI-1" target="_blank">
+              <div class="rounded-md shadow-md overflow-hidden">
+                <img src="assets/portfolio/AddStudentProfileUI.png" class="group-hover:scale-105 transition-all duration-300" width="w-full" alt="First" />
+              </div>
+
+              <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white group-hover:text-slate-200">Add Student Profile UI 👨‍🎓</h3>
+              
+              <p class="font-medium text-base text-secondary text-justify group-hover:text-slate-200 transition-all duration-50">
+                This is my simple project that only uses html, css, and a little javascript. This project was created with the aim of beautifying my home screen when using the browser
+              </p>
+            </a>
+          </div>
+          
+
+
+
+          <a href="index.html" class="mt-4 py-2 px-4 bg-primary text-white rounded-xl active:scale-95 hover:bg-transparent border-2 border-primary hover:text-primary transition-all duration-300">Back to Home!</a>
+        </div>
+      </div>
+    </section>
+    <!-- Portfolio Section UI End -->
 
     <!-- Footer Start -->
     <footer class="bg-dark pt-24 pb-12">

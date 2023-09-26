@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Portfolio || Christian Carlos Tertius</title>
     <link rel="stylesheet" href="src/output.css" />
+
+    <!-- TypeIt -->
+    <script src="https://unpkg.com/typeit@8.4.0/dist/index.umd.js"></script>
     <script>
       // On page load or when changing themes, best to add inline in `head` to avoid FOUC
       if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
@@ -61,14 +64,14 @@
                 </li>
                 <li class="lg:mt-0 mt-3 flex items-center pl-8">
                   <div class="flex">
-                    <span class="mr-2 text-sm text-slate-500">Light</span>
+                    <span class="mr-2 text-sm text-slate-500">🔆</span>
                     <input type="checkbox" class="hidden" id="dark-toggle" />
                     <label for="dark-toggle">
                       <div class="flex h-5 w-9 cursor-pointer items-center rounded-full border-2 border-primary bg-transparent p-1">
                         <div class="toggle-circle h-4 w-4 rounded-full transition-all duration-200 ease-in-out"></div>
                       </div>
                     </label>
-                    <span class="ml-2 text-sm text-slate-500">Dark</span>
+                    <span class="ml-2 text-sm text-slate-500">🌙</span>
                   </div>
                 </li>
               </ul>
@@ -80,15 +83,16 @@
     <!-- Header End -->
 
     <!-- Hero Section Start -->
-    <section id="home" class="pt-36 dark:bg-dark ">
-      <div class="container bg-[url('assets/bg.jpg')] bg-no-repeat bg-cover bg-center">
-        <!-- <img src="assets/bg.jpg" class="absolute -left-10z top-0 min-h-screen scale-125 opacity-40 dark:hidden overflow-hidden" alt=""> -->
-        <img src="" class="absolute" alt="">
+    <section id="home" class="pt-36 dark:bg-dark bg-no-repeat bg-center bg-cover">
+      <div class="container bg-no-repeat bg-cover bg-center">
+        <img src="" class="absolute" alt="" />
         <div class="flex flex-wrap">
           <div class="w-full self-center px-4 lg:w-1/2" data-aos="fade-right" data-aos-duration="1000">
-            <h1 class="text-base font-semibold text-primary md:text-xl">Hi Everyone ✋, i'm <span class="block font-bold text-dark text-4xl lg:text-5xl mt-1 dark:text-white font-['roboto']"> Christian Carlos Tertius</span></h1>
-            <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">Programmer & <span class="text-dark dark:text-white">Computer Science Student</span></h2>
-            <p class="font-medium text-secondary mb-10 leading-relaxed">A guy who likes <span class="font-bold">Programming</span> and a few other things</p>
+            <h1 class="text-base font-semibold text-primary md:text-xl">
+              Hi Everyone ✋, i'm <span class="block font-bold text-dark text-4xl lg:text-5xl mt-1 dark:text-white font-['roboto']" data-aos="fade-left" data-aos-duration="1300">Christian Carlos Tertius</span>
+            </h1>
+            <h2 class="font-medium text-secondary text-lg mt-2 mb-5 lg:text-2xl">Programmer & <span class="text-dark dark:text-white">Computer Science Student</span></h2>
+            <p class="font-medium text-secondary mb-10 leading-relaxed">A guy who likes <span class="font-bold" id="el"></span></p>
 
             <a
               href="#contact"
@@ -120,14 +124,13 @@
             <h4 class="font-bold uppercase text-primary text-lg mb-3">About Me</h4>
             <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl dark:text-white">Let's get to know who Christian is</h2>
             <p class="font-medium text-base text-secondary max-w-xl lg:text-lg text-justify">
-              Welcome to my portfolio! I'm Chris, a passionate and dedicated Computer Science student with a strong desire to explore the exciting world of technology. 
+              Welcome to my portfolio! I'm Chris, a passionate and dedicated Computer Science student with a strong desire to explore the exciting world of technology!
             </p>
           </div>
           <div class="w-full px-4 lg:w-1/2" data-aos="fade-left" data-aos-once="true" data-aos-delay="100">
             <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10 dark:text-white">Let's be friends</h3>
             <p class="font-medium text-base text-secondary mb-6 lg:text-lg">Here are some of my social media, let's be friends!</p>
             <div class="flex items-center" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
-
               <!-- Instagram -->
               <a
                 href="https://intagram.com/christian_christer"
@@ -170,6 +173,15 @@
                 </svg>
               </a> -->
 
+              <!-- Github -->
+              <a href="https://github.com/ChristianTertius" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>LinkedIn</title>
+                  <path
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                  />
+                </svg>
+              </a>
               <!-- LinkedIn -->
               <a
                 href="https://www.linkedin.com/in/christian-carlos-tertius/"
@@ -203,14 +215,15 @@
 
         <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
           <div class="mb-12 p-4 md:w-1/2" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
-            <a href="https://christiantertius.github.io/FirstWebsite/" target="_blank">
+            <a href="https://christiantertius.github.io/yamada-motorcycle/" target="_blank">
               <div class="rounded-md shadow-md overflow-hidden">
-                <img src="assets/portfolio/FirstWebsite.png" class="hover:scale-105 transition-all duration-300" alt="First" width="w-full" />
+                <img src="assets/portfolio/YamadaMotorcylce.png" class="hover:scale-105 transition-all duration-300" alt="First" width="w-full" />
               </div>
             </a>
-            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">My First Website 💻</h3>
+            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Yamada Motorcycle 🏍</h3>
             <p class="font-medium text-base text-secondary text-justify">
-              This is my first project made using bootstrap, here I am still a complete beginner who has not been familiar with web programming for a long time, so there are still some small mistakes
+              This is a website that I made using only html, and css, not javascript at all so that the existing interactions may still have many shortcomings, I made this project to fulfill individual assignments in the Human Computer
+              Interaction course in Semester 2.
             </p>
           </div>
           <div class="mb-12 p-4 md:w-1/2" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
@@ -236,16 +249,16 @@
             </p>
           </div>
           <div class="mb-12 p-4 md:w-1/2" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
-            <a href="https://christiantertius.github.io/JunglerEsportGallery/" target="_blank">
+            <a href="https://christiantertius.github.io/MTGraphy/" target="_blank">
               <div class="rounded-md shadow-md overflow-hidden">
-                <img src="assets/portfolio/JunglerGallery.png" class="hover:scale-105 transition-all duration-300" alt="Lorem" width="w-full" />
+                <img src="assets/portfolio/MTGraphy.png" class="hover:scale-105 transition-all duration-300 shadow-xl" alt="Lorem" width="w-full" />
               </div>
             </a>
-            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Jungler Gallery 🎮</h3>
-            <p class="font-medium text-base text-secondary">This website is a gallery and a brief bio of the jungler in the mobile legends game in season 10, made with html, css, and javascript.</p>
+            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">MTGraphy 📷</h3>
+            <p class="font-medium text-base text-secondary">This is a website made with HTML, CSS, and JS. This project was made to fulfill the group project assignment in the Human Computer Interaction course in Semester 2.</p>
           </div>
 
-          <a href="Projects.html" class="py-2 px-4 bg-primary text-white rounded-xl active:scale-95 hover:bg-transparent border-2 border-primary hover:text-primary transition-all duration-300">See More!</a>
+          <a href="Projects.html" class="py-2 px-4 bg-primary text-white rounded-xl active:scale-95 hover:bg-transparent border-2 border-primary hover:text-primary transition-all duration-300" target="_blank">See More!</a>
         </div>
       </div>
     </section>
@@ -358,23 +371,29 @@
           </div>
         </div>
 
-        <form>
+        <form name="christian-contact-form">
           <div class="w-full lg:w-2/3 lg:mx-auto">
             <div class="w-full px-4 mb-8">
               <label for="name" class="text-base font-bold text-primary">Name</label>
-              <input type="text" id="name" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary" autocomplete="off" />
+              <input type="text" id="name" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary" autocomplete="off" name="name" />
             </div>
             <div class="w-full px-4 mb-8">
               <label for="email" class="text-base font-bold text-primary">Email</label>
-              <input type="email" id="email" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary" autocomplete="off" />
+              <input type="email" id="email" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary" autocomplete="off" name="email" />
             </div>
             <div class="w-full px-4 mb-8">
-              <label for="message" class="text-base font-bold text-primary">Massege</label>
-              <textarea type="email" id="email" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-32"> </textarea>
+              <label for="message" class="text-base font-bold text-primary">Message</label>
+              <textarea type="email" id="email" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-32" name="message"> </textarea>
             </div>
 
-            <div class="w-full px-4">
-              <button class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500" onclick="confirm('Apakah anda ingin mengirimkan pesan ini?'); alert('Terima Kasih')">Send</button>
+            <div class="w-full px-4 flex">
+              <button
+                type="submit"
+                class="send py-2 px-4 bg-primary text-white rounded-xl active:scale-95 hover:bg-transparent border-2 border-primary hover:text-primary transition-all duration-300 mx-auto w-24"
+                onclick="confirm('Apakah anda ingin mengirimkan pesan ini?'); alert('Terima Kasih')"
+              >
+                Send
+              </button>
             </div>
           </div>
         </form>
@@ -503,6 +522,24 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+
+    <!-- Contact Form JS - Jamie Wilson -->
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbyCvkZfnR1weDBDTCih0aiLBJ78NWt3MCXQpMfPcpCXJ9XiuNpgVu4PCMeztpC3YERadQ/exec";
+      const form = document.forms["christian-contact-form"];
+      const btnKirim = document.querySelector(".send")
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) =>{ 
+            console.log("Success!", response)
+            // reset form
+            form.reset()
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
     </script>
   </body>
 </html>

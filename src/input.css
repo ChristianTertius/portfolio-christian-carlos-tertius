@@ -27,7 +27,7 @@ body {
 }
 
 .toggle-circle{
-  @apply -translate-x-[.15rem] bg-[url('assets/light.png')] bg-primary
+  @apply -translate-x-[.15rem] bg-primary
 }
 
 #dark-toggle:checked ~ label div.toggle-circle {

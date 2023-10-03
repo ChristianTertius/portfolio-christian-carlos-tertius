@@ -25,36 +25,35 @@
   </head>
   <body>
     <!-- Header Start -->
-    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10" data-aos="fade-down">
+    <header class="absolute top-0 left-0 z-10 flex items-center w-full bg-transparent" data-aos="fade-down">
       <div class="container">
-        <div class="flex items-center justify-between relative">
+        <div class="relative flex items-center justify-between">
           <div class="px-4">
-            <a href="index.html" class="font-bold text-lg text-primary block py-6">Christian Carlos Tertius</a>
+            <a href="index.html" class="block py-6 text-lg font-bold text-primary">Christian Carlos Tertius</a>
           </div>
           <div class="flex items-center px-4">
-            <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
-              <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
-              <span class="hamburger-line transition duration-300 ease-in-out"></span>
-              <span class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
+            <button id="hamburger" name="hamburger" type="button" class="absolute block right-4 lg:hidden">
+              <span class="transition duration-300 ease-in-out origin-top-left hamburger-line"></span>
+              <span class="transition duration-300 ease-in-out hamburger-line"></span>
+              <span class="transition duration-300 ease-in-out origin-bottom-left hamburger-line"></span>
             </button>
 
             <nav
               id="nav-menu"
               class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-dark dark:shadow-slate-500 lg:dark:bg-transparent font-[roboto] tracking-wider"
             >
-                <li class="lg:mt-0 mt-3 flex items-center pl-8">
-                  <div class="flex">
-                    <span class="mr-2 text-sm text-slate-500">🔆</span>
-                    <input type="checkbox" class="hidden" id="dark-toggle" />
-                    <label for="dark-toggle">
-                      <div class="flex h-5 w-9 cursor-pointer items-center rounded-full border-2 border-primary bg-transparent p-1">
-                        <div class="toggle-circle h-4 w-4 rounded-full transition-all duration-200 ease-in-out"></div>
-                      </div>
-                    </label>
-                    <span class="ml-2 text-sm text-slate-500">🌙</span>
-                  </div>
-                </li>
-              </ul>
+              <li class="flex items-center pl-8 mt-3 lg:mt-0">
+                <div class="flex">
+                  <span class="mr-2 text-sm text-slate-500">🔆</span>
+                  <input type="checkbox" class="hidden" id="dark-toggle" />
+                  <label for="dark-toggle">
+                    <div class="flex items-center h-5 p-1 bg-transparent border-2 rounded-full cursor-pointer w-9 border-primary">
+                      <div class="w-4 h-4 transition-all duration-200 ease-in-out rounded-full toggle-circle"></div>
+                    </div>
+                  </label>
+                  <span class="ml-2 text-sm text-slate-500">🌙</span>
+                </div>
+              </li>
             </nav>
           </div>
         </div>
@@ -66,58 +65,58 @@
     <section id="portfolio" class="w-full pt-36 pb-16 bg-slate-100 dark:bg-slate-800 font-['roboto']">
       <div class="container">
         <div class="w-full p-4 xl:-ml-5" data-aos-once="true" data-aos="zoom-in">
-          <div class="max-w-xl mx-auto text-center mb-16">
-            <h4 class="font-semibold text-lg text-primary mb-2">Portfolio</h4>
-            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Projects || <span class="text-primary">Website</span></h2>
+          <div class="max-w-xl mx-auto mb-16 text-center">
+            <h4 class="mb-2 text-lg font-semibold text-primary">Portfolio</h4>
+            <h2 class="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl dark:text-white">Projects || <span class="text-primary">Website</span></h2>
             <p class="font-medium text-md text-secondary md:text-lg">This is the projects I've created</p>
           </div>
         </div>
 
-        <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto gap-4">
-          <div class="xl:-ml-5 p-7 md:w-1/2 border-2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white cursor-pointer" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
+        <div class="flex flex-wrap justify-center w-full gap-4 px-4 xl:w-10/12 xl:mx-auto">
+          <div class="border-2 cursor-pointer xl:-ml-5 p-7 md:w-1/2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
             <a href="https://christiantertius.github.io/FirstWebsite/" target="_blank">
-              <div class="rounded-md shadow-md overflow-hidden">
-                <img src="assets/portfolio/FirstWebsite.png" class="group-hover:scale-105 transition-all duration-300" alt="First" width="w-full" />
+              <div class="overflow-hidden rounded-md shadow-md">
+                <img src="assets/portfolio/FirstWebsite.png" class="transition-all duration-300 group-hover:scale-105" alt="First" width="w-full" />
               </div>
 
-              <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white group-hover:text-slate-200">My First Website 💻</h3>
+              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white group-hover:text-slate-200">My First Website 💻</h3>
               <div class="mb-4">
                 <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-red-400 group-hover:bg-red-400/30 shadow-lg transition-all duration-150">HTML</button>
                 <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-sky-400 group-hover:bg-sky-400/30 shadow-lg transition-all duration-150">CSS</button>
                 <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-yellow-400 group-hover:bg-yellow-400/30 shadow-lg transition-all duration-150">JS</button>
                 <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-primary group-hover:bg-primary/30 shadow-lg transition-all duration-150">Bootstrap</button>
               </div>
-              <p class="font-medium text-base text-secondary text-justify group-hover:text-slate-200 transition-all duration-50">
+              <p class="text-base font-medium text-justify transition-all text-secondary group-hover:text-slate-200 duration-50">
                 This is my first project made using bootstrap, here I am still a complete beginner who has not been familiar with web programming for a long time, so there are still some small mistakes
               </p>
             </a>
           </div>
 
-          <div class="p-7 md:w-1/2 border-2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white cursor-pointer" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
+          <div class="border-2 cursor-pointer p-7 md:w-1/2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
             <a href="https://christiantertius.github.io/Github_Coba4_Home-Screen_Responsive/" target="_blank">
-              <div class="rounded-md shadow-md overflow-hidden">
-                <img src="assets/portfolio/HomePage.png" class="group-hover:scale-105 transition-all duration-300" alt="First" width="w-full" />
+              <div class="overflow-hidden rounded-md shadow-md">
+                <img src="assets/portfolio/HomePage.png" class="transition-all duration-300 group-hover:scale-105" alt="First" width="w-full" />
               </div>
 
-              <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white group-hover:text-slate-200">My Home Screen 🏠</h3>
+              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white group-hover:text-slate-200">My Home Screen 🏠</h3>
               <div class="mb-4">
                 <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-red-400 group-hover:bg-red-400/30 shadow-lg transition-all duration-150">HTML</button>
                 <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-sky-400 group-hover:bg-sky-400/30 shadow-lg transition-all duration-150">CSS</button>
                 <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-yellow-400 group-hover:bg-yellow-400/30 shadow-lg transition-all duration-150">JS</button>
               </div>
-              <p class="font-medium text-base text-secondary text-justify group-hover:text-slate-200 transition-all duration-50">
+              <p class="text-base font-medium text-justify transition-all text-secondary group-hover:text-slate-200 duration-50">
                 This is my simple project that only uses html, css, and a little javascript. This project was created with the aim of beautifying my home screen when using the browser
               </p>
             </a>
           </div>
 
-          <div class="xl:-ml-5 p-7 md:w-1/2 border-2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white cursor-pointer" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
+          <div class="border-2 cursor-pointer xl:-ml-5 p-7 md:w-1/2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
             <a href="https://christiantertius.github.io/LinDan/dist/" target="_blank">
-              <div class="rounded-md shadow-md overflow-hidden">
-                <img src="assets/portfolio/LinDan.png" class="group-hover:scale-105 transition-all duration-300" alt="First" width="w-full" />
+              <div class="overflow-hidden rounded-md shadow-md">
+                <img src="assets/portfolio/LinDan.png" class="transition-all duration-300 group-hover:scale-105" alt="First" width="w-full" />
               </div>
 
-              <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white group-hover:text-slate-200">Lin Dan's World 🏸</h3>
+              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white group-hover:text-slate-200">Lin Dan's World 🏸</h3>
               <div class="mb-4">
                 <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-red-400 group-hover:bg-red-400/30 shadow-lg transition-all duration-150">HTML</button>
                 <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-blue-400 group-hover:bg-sky-400/30 shadow-lg transition-all duration-150">CSS</button>
@@ -125,159 +124,156 @@
                 <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-sky-400 group-hover:bg-sky-400/30 shadow-lg transition-all duration-150">TailwindCSS</button>
                 <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-violet-400 group-hover:bg-violet-400/30 shadow-lg transition-all duration-150">DaisyUI</button>
               </div>
-              <p class="font-medium text-base text-secondary text-justify group-hover:text-slate-200 transition-all duration-50">
+              <p class="text-base font-medium text-justify transition-all text-secondary group-hover:text-slate-200 duration-50">
                 This is a website that I made for a former men's single badminton athlete from china named Lin Dan, because he is one of my idols in playing badminton. Created using tailwindcss, and daisyui
               </p>
             </a>
           </div>
 
-          <div class="p-7 md:w-1/2 border-2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white cursor-pointer" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
+          <div class="border-2 cursor-pointer p-7 md:w-1/2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
             <a href="https://christiantertius.github.io/JunglerEsportGallery/" target="_blank">
-              <div class="rounded-md shadow-md overflow-hidden">
-                <img src="assets/portfolio/JunglerGallery.png" class="group-hover:scale-105 transition-all duration-300" alt="First" width="w-full" />
+              <div class="overflow-hidden rounded-md shadow-md">
+                <img src="assets/portfolio/JunglerGallery.png" class="transition-all duration-300 group-hover:scale-105" alt="First" width="w-full" />
               </div>
 
-              <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white group-hover:text-slate-200">Jungler Gallery 🎮</h3>
+              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white group-hover:text-slate-200">Jungler Gallery 🎮</h3>
               <div class="mb-4">
                 <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-red-400 group-hover:bg-red-400/30 shadow-lg transition-all duration-150">HTML</button>
                 <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-blue-400 group-hover:bg-sky-400/30 shadow-lg transition-all duration-150">CSS</button>
                 <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-yellow-400 group-hover:bg-yellow-400/30 shadow-lg transition-all duration-150">JS</button>
               </div>
-              <p class="font-medium text-base text-secondary text-justify group-hover:text-slate-200 transition-all duration-50">
+              <p class="text-base font-medium text-justify transition-all text-secondary group-hover:text-slate-200 duration-50">
                 This website is a gallery and a brief bio of the jungler in the mobile legends game in season 10, made with html, css, and javascript.
               </p>
             </a>
           </div>
 
-          <div class="xl:-ml-5 p-7 md:w-1/2 border-2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white cursor-pointer" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
+          <div class="border-2 cursor-pointer xl:-ml-5 p-7 md:w-1/2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
             <a href="https://christiantertius.github.io/yamada-motorcycle/" target="_blank">
-              <div class="rounded-md shadow-md overflow-hidden">
-                <img src="assets/portfolio/YamadaMotorcylce.png" class="group-hover:scale-105 transition-all duration-300" alt="First" width="w-full" />
+              <div class="overflow-hidden rounded-md shadow-md">
+                <img src="assets/portfolio/YamadaMotorcylce.png" class="transition-all duration-300 group-hover:scale-105" alt="First" width="w-full" />
               </div>
 
-              <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white group-hover:text-slate-200">Yamada Motorcycle 🏍</h3>
+              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white group-hover:text-slate-200">Yamada Motorcycle 🏍</h3>
               <div class="mb-4">
                 <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-red-400 group-hover:bg-red-400/30 shadow-lg transition-all duration-150">HTML</button>
                 <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-blue-400 group-hover:bg-sky-400/30 shadow-lg transition-all duration-150">CSS</button>
               </div>
-              <p class="font-medium text-base text-secondary text-justify group-hover:text-slate-200 transition-all duration-50">
-                This is a website that I made using only html, and css, not javascript at all so that the existing interactions may still have many shortcomings, I made this project to fulfill individual assignments in the Human Computer Interaction course in Semester 2.
+              <p class="text-base font-medium text-justify transition-all text-secondary group-hover:text-slate-200 duration-50">
+                This is a website that I made using only html, and css, not javascript at all so that the existing interactions may still have many shortcomings, I made this project to fulfill individual assignments in the Human Computer
+                Interaction course in Semester 2.
               </p>
             </a>
           </div>
 
-          <div class="p-7 md:w-1/2 border-2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white cursor-pointer" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
+          <div class="border-2 cursor-pointer p-7 md:w-1/2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
             <a href="https://christiantertius.github.io/MTGraphy/" target="_blank">
-              <div class="rounded-md shadow-md overflow-hidden">
-                <img src="assets/portfolio/MTGraphy.png" class="group-hover:scale-105 transition-all duration-300 shadow-lg" alt="First" width="w-full" />
+              <div class="overflow-hidden rounded-md shadow-md">
+                <img src="assets/portfolio/MTGraphy.png" class="transition-all duration-300 shadow-lg group-hover:scale-105" alt="First" width="w-full" />
               </div>
 
-              <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white group-hover:text-slate-200">MTGraphy 📷</h3>
+              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white group-hover:text-slate-200">MTGraphy 📷</h3>
               <div class="mb-4">
                 <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-red-400 group-hover:bg-red-400/30 shadow-lg transition-all duration-150">HTML</button>
                 <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-blue-400 group-hover:bg-blue-400/30 shadow-lg transition-all duration-150">CSS</button>
                 <button class="p-[.15rem] rounded-lg px-2 text-[12px] text-white bg-yellow-400 group-hover:bg-yellow-400/30 shadow-lg transition-all duration-150">JS</button>
               </div>
-              <p class="font-medium text-base text-secondary text-justify group-hover:text-slate-200 transition-all duration-50">
+              <p class="text-base font-medium text-justify transition-all text-secondary group-hover:text-slate-200 duration-50">
                 This is a website made with HTML, CSS, and JS. This project was made to fulfill the group project assignment in the Human Computer Interaction course in Semester 2.
               </p>
             </a>
           </div>
-          <!-- <a href="index.html" class="py-2 px-4 bg-primary text-white rounded-xl active:scale-95 hover:bg-transparent border-2 border-primary hover:text-primary transition-all duration-300">Back to Home!</a> -->
+          <!-- <a href="index.html" class="px-4 py-2 text-white transition-all duration-300 border-2 bg-primary rounded-xl active:scale-95 hover:bg-transparent border-primary hover:text-primary">Back to Home!</a> -->
         </div>
       </div>
     </section>
     <!-- Portfolio Sectin Website End -->
 
-
     <!-- Portfolio Section UI Start -->
     <section id="portfolio" class="w-full pt-36 pb-16 bg-slate-100 dark:bg-slate-800 font-['roboto']">
       <div class="container">
         <div class="w-full p-4" data-aos-once="true" data-aos="zoom-in">
-          <div class="max-w-xl mx-auto text-center mb-16">
-            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Projects || <span class="text-primary">UI Design</span></h2>
+          <div class="max-w-xl mx-auto mb-16 text-center">
+            <h2 class="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl dark:text-white">Projects || <span class="text-primary">UI Design</span></h2>
             <p class="font-medium text-md text-secondary md:text-lg">This is the projects I've created</p>
           </div>
         </div>
 
-        <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto gap-4">
-          <div class="xl:-ml-5 p-7 md:w-1/2 border-2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white cursor-pointer" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
+        <div class="flex flex-wrap justify-center w-full gap-4 px-4 xl:w-10/12 xl:mx-auto">
+          <div class="border-2 cursor-pointer xl:-ml-5 p-7 md:w-1/2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
             <a href="https://www.figma.com/file/a5ufqIQE09DfEUADyYoRKi/Kelompok-3---AI?type=design&node-id=0%3A1&mode=design&t=UKpy82b1flxBVGAe-1" target="_blank">
-              <div class="rounded-md shadow-xl overflow-hidden">
-                <img src="assets/portfolio/PC Builder.png" class="group-hover:scale-105 transition-all duration-300" alt="First" width="w-full" />
+              <div class="overflow-hidden rounded-md shadow-xl">
+                <img src="assets/portfolio/PC Builder.png" class="transition-all duration-300 group-hover:scale-105" alt="First" width="w-full" />
               </div>
 
-              <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white group-hover:text-slate-200">PC Builder UI 💻</h3>
-              <p class="font-medium text-base text-secondary text-justify group-hover:text-slate-200 transition-all duration-50">
+              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white group-hover:text-slate-200">PC Builder UI 💻</h3>
+              <p class="text-base font-medium text-justify transition-all text-secondary group-hover:text-slate-200 duration-50">
                 This is a PC Builder UI created to fulfill the Artificial Intelligence course, this UI is made in groups of 5 people. This PC Builder is made so that users can easily choose pc components that suit their needs and budget.
               </p>
             </a>
           </div>
 
-          <div class="p-7 md:w-1/2 border-2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white cursor-pointer" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
+          <div class="border-2 cursor-pointer p-7 md:w-1/2 border-primary rounded-xl hover:bg-primary/70 dark:hover:bg-slate-600 group dark:text-white" data-aos-once="true" data-aos-duration="1000" data-aos="flip-down">
             <a href="https://www.figma.com/file/RmVCFA6zQX8Lt02bwZOsLG/UTS-SE-UI?type=design&node-id=0%3A1&mode=design&t=WbMlfJQ8U9EHHEBI-1" target="_blank">
-              <div class="rounded-md shadow-md overflow-hidden">
-                <img src="assets/portfolio/AddStudentProfileUI.png" class="group-hover:scale-105 transition-all duration-300" width="w-full" alt="First" />
+              <div class="overflow-hidden rounded-md shadow-md">
+                <img src="assets/portfolio/AddStudentProfileUI.png" class="transition-all duration-300 group-hover:scale-105" width="w-full" alt="First" />
               </div>
 
-              <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white group-hover:text-slate-200">Add Student Profile UI 👨‍🎓</h3>
-              
-              <p class="font-medium text-base text-secondary text-justify group-hover:text-slate-200 transition-all duration-50">
+              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white group-hover:text-slate-200">Add Student Profile UI 👨‍🎓</h3>
+
+              <p class="text-base font-medium text-justify transition-all text-secondary group-hover:text-slate-200 duration-50">
                 This is my simple project that only uses html, css, and a little javascript. This project was created with the aim of beautifying my home screen when using the browser
               </p>
             </a>
           </div>
-          
 
-
-
-          <a href="index.html" class="mt-4 py-2 px-4 bg-primary text-white rounded-xl active:scale-95 hover:bg-transparent border-2 border-primary hover:text-primary transition-all duration-300">Back to Home!</a>
+          <a href="index.html" class="px-4 py-2 mt-4 text-white transition-all duration-300 border-2 bg-primary rounded-xl active:scale-95 hover:bg-transparent border-primary hover:text-primary">Back to Home!</a>
         </div>
       </div>
     </section>
     <!-- Portfolio Section UI End -->
 
     <!-- Footer Start -->
-    <footer class="bg-dark pt-24 pb-12">
+    <footer class="pt-24 pb-12 bg-dark">
       <div class="container">
         <div class="flex flex-wrap justify-around">
-          <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
-            <h2 class="font-bold text-4xl text-primary mb-5">Chris</h2>
-            <h3 class="font-bold text-2xl mb-2">Contact Me</h3>
+          <div class="w-full px-4 mb-12 font-medium text-slate-300 md:w-1/3">
+            <h2 class="mb-5 text-4xl font-bold text-primary">Chris</h2>
+            <h3 class="mb-2 text-2xl font-bold">Contact Me</h3>
             <p>christian160103@gmail.com</p>
             <p>Manado</p>
           </div>
           <!-- <div class="w-full px-4 mb-12 md:w-1/3">
-            <h3 class="font-semibold text-xl text-white mb-5">Blog Category</h3>
+            <h3 class="mb-5 text-xl font-semibold text-white">Blog Category</h3>
             <ul class="text-slate-300">
               <li>
-                <a href="" class="inline-block text-base hover:text-primary mb-3">Programming</a>
+                <a href="" class="inline-block mb-3 text-base hover:text-primary">Programming</a>
               </li>
               <li>
-                <a href="" class="inline-block text-base hover:text-primary mb-3">Technology</a>
+                <a href="" class="inline-block mb-3 text-base hover:text-primary">Technology</a>
               </li>
               <li>
-                <a href="" class="inline-block text-base hover:text-primary mb-3">Life Style</a>
+                <a href="" class="inline-block mb-3 text-base hover:text-primary">Life Style</a>
               </li>
             </ul>
           </div> -->
           <div class="w-full px-4 mb-12 md:w-1/3">
-            <h3 class="font-semibold text-xl text-white mb-5">Link</h3>
+            <h3 class="mb-5 text-xl font-semibold text-white">Link</h3>
             <ul class="text-slate-300">
               <li>
-                <a href="#home" class="inline-block text-base hover:text-primary mb-3">Home</a>
+                <a href="#home" class="inline-block mb-3 text-base hover:text-primary">Home</a>
               </li>
               <li>
-                <a href="#about" class="inline-block text-base hover:text-primary mb-3">About Me</a>
+                <a href="#about" class="inline-block mb-3 text-base hover:text-primary">About Me</a>
               </li>
               <li>
-                <a href="#portfolio" class="inline-block text-base hover:text-primary mb-3">Portfolio</a>
+                <a href="#portfolio" class="inline-block mb-3 text-base hover:text-primary">Portfolio</a>
               </li>
               <li>
-                <a href="#clients" class="inline-block text-base hover:text-primary mb-3">Clients</a>
+                <a href="#clients" class="inline-block mb-3 text-base hover:text-primary">Clients</a>
               </li>
               <li>
-                <a href="#contact" class="inline-block text-base hover:text-primary mb-3">Contact</a>
+                <a href="#contact" class="inline-block mb-3 text-base hover:text-primary">Contact</a>
               </li>
             </ul>
           </div>
@@ -286,7 +282,7 @@
         <div class="w-full pt-10 border-t border-slate-700">
           <div class="flex items-center justify-center mb-5">
             <!-- Youtube -->
-            <a href="https://youtube.com/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+            <a href="https://youtube.com/" target="_blank" class="flex items-center justify-center mr-3 border rounded-full w-9 h-9 border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
               <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>YouTube</title>
                 <path
@@ -296,7 +292,7 @@
             </a>
 
             <!-- Instagram -->
-            <a href="https://intagram.com/christian_christer" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+            <a href="https://intagram.com/christian_christer" target="_blank" class="flex items-center justify-center mr-3 border rounded-full w-9 h-9 border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
               <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>Instagram</title>
                 <path
@@ -306,7 +302,7 @@
             </a>
 
             <!-- Facebook -->
-            <a href="https://intagram.com/christian_christer" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+            <a href="https://intagram.com/christian_christer" target="_blank" class="flex items-center justify-center mr-3 border rounded-full w-9 h-9 border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
               <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>Facebook</title>
                 <path
@@ -316,7 +312,7 @@
             </a>
 
             <!-- Tiktok -->
-            <!-- <a href="https://intagram.com/christian_christer" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+            <!-- <a href="https://intagram.com/christian_christer" target="_blank" class="flex items-center justify-center mr-3 border rounded-full w-9 h-9 border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
               <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>TikTok</title>
                 <path
@@ -329,7 +325,7 @@
             <a
               href="https://www.linkedin.com/in/christian-carlos-tertius/"
               target="_blank"
-              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              class="flex items-center justify-center mr-3 border rounded-full w-9 h-9 border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
             >
               <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>LinkedIn</title>
@@ -339,7 +335,7 @@
               </svg>
             </a>
           </div>
-          <p class="font-medium text-xs text-slate-500 text-center">
+          <p class="text-xs font-medium text-center text-slate-500">
             Create with <span class="text-pink-500">❤</span> by <a href="https://youtube.com/ChrisTer" target="_blank" class="font-bold text-primary"> Christian Carlos Tertius</a>, using
             <span class="font-semibold text-sky-500">Tailwind CSS</span>
           </p>

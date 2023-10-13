@@ -74,3 +74,12 @@ document.addEventListener("DOMContentLoaded", function () {
     .go();
 
 });
+
+
+// Alert
+function notif() {
+  let text = "Are you sure?";
+  if (confirm(text) == true) {
+    alert("Thank You")
+  }
+}
